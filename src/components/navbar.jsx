@@ -6,13 +6,6 @@ import "./navbar.css";
 export default function Navbar() {
   return (
     <header>
-      <LiquidGlass
-          elasticity={0}
-    displacementScale={30}
-    blurAmount={0.35}
-    saturation={1.2}
-    aberrationIntensity={0}
-      >
 
         <nav className="navbar">
 
@@ -30,7 +23,7 @@ export default function Navbar() {
           </div>
 
         </nav>
-      </LiquidGlass>
+
     </header>
   );
 }

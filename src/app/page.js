@@ -1,3 +1,4 @@
+"use client"
 import styles from "./page.module.css";
 import Navbar from "@/components/NavbarLoader";
 import Sphere from "@/components/sphere";
@@ -6,9 +7,11 @@ import PricingPage from "@/components/Pricing";
 import FooterPage from "@/components/Footer";
 import DocumentsPage from "@/components/Documents";
 
+
 export default function Home() {
   return (
     <div className={styles.page}>
+
       <Navbar />
       <main>
         <HomePage />
@@ -17,6 +20,7 @@ export default function Home() {
         <DocumentsPage />
       </main>
       <FooterPage />
+
     </div>
   );
 }
