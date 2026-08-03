@@ -1,3 +1,4 @@
+import "./style/Pricing.css";
 const plans = [
     {
         title: "Free",

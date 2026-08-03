@@ -1,3 +1,5 @@
+import "./style/Footer.css";
+
 export default function FooterPage() {
     return (
         <footer>

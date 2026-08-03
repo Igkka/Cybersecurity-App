@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import "./sphere.css";
+import "./style/sphere.css";
 
 export default function Sphere() {
   const [glow, setGlow] = useState({ x: 0, y: 0 });

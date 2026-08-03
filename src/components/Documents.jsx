@@ -1,3 +1,4 @@
+import "./style/Documents.css";
 const docs = [
     "Privacy Policy",
     "Terms of Service",
@@ -9,10 +10,8 @@ const docs = [
 
 export default function DocumentsPage() {
     return (
-        <section
-            
-            className="documents"
-        >
+        <section className="documents">
+
             <h2>
                 Documents
             </h2>

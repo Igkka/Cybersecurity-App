@@ -1,0 +1,21 @@
+.home{
+    min-height:88vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+   h1{
+     margin-top: 250px;
+   }
+
+}
+
+.subtitle{
+    margin-top:75px;
+    color:#bcbcbc;
+    margin-bottom:55px;
+
+}
+

@@ -1,9 +1,8 @@
+import "./style/Home.css"
+
 export default function HomePage() {
     return (
-        <section
-            className="home"
-            
-        >
+        <section className="home">
             <p className="subtitle">
                 PulseGuard - the best data protection assistant
             </p>

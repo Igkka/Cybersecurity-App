@@ -1,7 +1,6 @@
 "use client";
 
-import LiquidGlass from "liquid-glass-react";
-import "./navbar.css";
+import "./style/navbar.css";
 
 export default function Navbar() {
   return (
@@ -17,7 +16,7 @@ export default function Navbar() {
             <a href="#documents">Documents</a>
           </ul>
 
-          <div className="кreg">
+          <div className="auth-buttons">
             <button className="login">Login</button>
             <button className="register">Register</button>
           </div>
