@@ -7,10 +7,10 @@ const docs = [
     "Support"
 ];
 
-function Documents() {
+export default function DocumentsPage() {
     return (
         <section
-            id="documents"
+            
             className="documents"
         >
             <h2>
@@ -32,5 +32,3 @@ function Documents() {
         </section>
     );
 }
-
-export default Documents;

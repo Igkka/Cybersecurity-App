@@ -1,4 +1,4 @@
-function Footer() {
+export default function FooterPage() {
     return (
         <footer>
 
@@ -24,4 +24,3 @@ function Footer() {
     );
 }
 
-export default Footer;

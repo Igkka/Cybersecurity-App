@@ -1,0 +1,46 @@
+.navbar{
+    width: 800px;
+    max-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+header{
+    position: fixed;
+
+    top: -5%;
+    left: 50%;
+
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.login{
+    border: none;
+    outline: none;
+    background: #484848;
+    width: 75px;
+    height: 30px;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.register{
+    border: none;
+    outline: none;
+    background: #D9D9D9;
+    width: 75px;
+    height: 30px;
+    border-radius: 50px;
+    margin-left: 15px;
+    color: black;
+    cursor: pointer;
+}
+

@@ -1,41 +1,36 @@
-function Navbar() {
-    return (
-        <header>
-            <nav className="navbar">
+"use client";
 
-                <div className="logo">
-                    PulseGuard
-                </div>
+import LiquidGlass from "liquid-glass-react";
+import "./navbar.css";
 
-                <ul className="nav-links">
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
+export default function Navbar() {
+  return (
+    <header>
+      <LiquidGlass
+          elasticity={0}
+    displacementScale={30}
+    blurAmount={0.35}
+    saturation={1.2}
+    aberrationIntensity={0}
+      >
 
-                    <li>
-                        <a href="#pricing">Pricing</a>
-                    </li>
+        <nav className="navbar">
 
-                    <li>
-                        <a href="#documents">Documents</a>
-                    </li>
-                </ul>
+          <div className="logo">PulseGuard</div>
 
-                <div className="buttons">
+          <ul className="nav-links">
+            <a href="#home">Home</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#documents">Documents</a>
+          </ul>
 
-                    <button className="login">
-                        Login
-                    </button>
+          <div className="кreg">
+            <button className="login">Login</button>
+            <button className="register">Register</button>
+          </div>
 
-                    <button className="register">
-                        Register
-                    </button>
-
-                </div>
-
-            </nav>
-        </header>
-    );
+        </nav>
+      </LiquidGlass>
+    </header>
+  );
 }
-
-export default Navbar;

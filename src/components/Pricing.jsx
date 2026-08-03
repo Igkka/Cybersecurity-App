@@ -28,10 +28,10 @@ const plans = [
     }
 ];
 
-function Pricing() {
+export default function PricingPage() {
     return (
         <section
-            id="pricing"
+            
             className="pricing"
         >
             <h2>Pricing</h2>
@@ -68,5 +68,3 @@ function Pricing() {
         </section>
     );
 }
-
-export default Pricing;

@@ -129,7 +129,7 @@ a.secondary {
   }
 
   .page {
-    --background: #000;
+    background: linear-gradient(0deg,#162A16,#233F2D);
     --foreground: #000;
 
     --text-primary: #ededed;
