@@ -1,8 +1,26 @@
 .docs{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:25px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+gap: 25px;
+opacity: 0;
+    transform: translateY(40px);
+    animation: show .8s ease forwards;
+}
+.documents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 450px;
+    
+  h2{
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 150px;
 
+} 
 }
 
 .doc{
@@ -14,9 +32,36 @@
     backdrop-filter:blur(20px);
     cursor:pointer;
     transition:.3s;
+    width: 150px;
+    height: 100px;
 }
 
 .doc:hover{
     transform:translateY(-8px);
     background:rgba(46,255,119,.12);
+}
+
+
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground);
+  background:
+    radial-gradient(
+      circle at 10% 5%,
+      #30ad30,
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(59, 246, 131, 0.25),
+      transparent 40%
+    ),
+    #233F2D;
+
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

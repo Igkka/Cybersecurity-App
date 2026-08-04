@@ -7,4 +7,3 @@ const Navbar = dynamic(() => import("./navbar"), { ssr: false });
 export default function NavbarLoader() {
   return <Navbar />;
 }
-C

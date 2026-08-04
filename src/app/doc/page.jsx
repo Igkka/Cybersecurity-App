@@ -1,15 +1,21 @@
-import "./style/Documents.css";
+import "@/components/style/Documents.css";
+import Navbar from "@/components/NavbarLoader";
+import Sphere from "@/components/sphere";
 const docs = [
     "Privacy Policy",
     "Terms of Service",
-    "API",
     "User Guide",
     "FAQ",
     "Support"
 ];
 
-export default function DocumentsPage() {
+const DocumentsPage = () => {
     return (
+        <>
+        <Navbar />
+
+           
+        <Sphere/>
         <section className="documents">
 
             <h2>
@@ -29,5 +35,8 @@ export default function DocumentsPage() {
 
             </div>
         </section>
+        </>
     );
 }
+
+export default DocumentsPage

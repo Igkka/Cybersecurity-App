@@ -1,6 +1,12 @@
 "use client";
 
 import "./style/navbar.css";
+import Link from "next/link";
+
+let links = [
+  "/doc",
+  "/home"
+]
 
 export default function Navbar() {
   return (
@@ -11,9 +17,9 @@ export default function Navbar() {
           <div className="logo">PulseGuard</div>
 
           <ul className="nav-links">
-            <a href="#home">Home</a>
+            <Link href="/">Home</Link>
             <a href="#pricing">Pricing</a>
-            <a href="#documents">Documents</a>
+            <Link href="/doc">Documents</Link>
           </ul>
 
           <div className="auth-buttons">

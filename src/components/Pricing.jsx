@@ -2,29 +2,23 @@ import "./style/Pricing.css";
 const plans = [
     {
         title: "Free",
-        price: "$0 / month",
+        price: "$0 - 10 credits",
         features: [
-            "Basic Protection",
-            "1 Device",
-            "Community Support"
+            "Basic Password Storage",
+            "Password Strength Check",
+            "Basic Support"
         ]
     },
     {
         title: "Pro",
-        price: "$9.99 / month",
+        price: "$1 - 100 credit",
         features: [
-            "Unlimited Devices",
-            "Cloud Backup",
-            "Priority Support"
-        ]
-    },
-    {
-        title: "Enterprise",
-        price: "Contact Us",
-        features: [
-            "Dedicated Manager",
-            "Unlimited Users",
-            "24/7 Support"
+            "Strong Password Storage",
+            "Password Strength Check",
+            "Strong Password Generator",
+            "Checking For Mail Security",
+            "Site Security Check",
+            "Strong Support"
         ]
     }
 ];
@@ -32,7 +26,7 @@ const plans = [
 export default function PricingPage() {
     return (
         <section
-            
+            id="pricing"
             className="pricing"
         >
             <h2>Pricing</h2>

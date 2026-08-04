@@ -9,9 +9,9 @@ export default function HomePage() {
 
 
             <h1>
-                Security doesn&apos;t start with technology;
+                Security doesn't start with technology
                 <br />
-                it starts with the habit of protecting your data.
+                it starts with the habit of protecting your data
             </h1>
         </section>
     );

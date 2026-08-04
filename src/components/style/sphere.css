@@ -8,13 +8,14 @@ body{
 .scene {
   position: fixed;
   inset: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   overflow: hidden;
   background: transparent;
+  opacity: 0;
+    transform: translateY(40px);
+    animation: show .8s ease forwards;
 }
 
 .sphere {
