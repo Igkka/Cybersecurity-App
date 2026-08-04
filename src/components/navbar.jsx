@@ -3,12 +3,17 @@
 import "./style/navbar.css";
 import Link from "next/link";
 
+
 let links = [
   "/doc",
   "/home"
 ]
 
 export default function Navbar() {
+
+  const isAuth = localStorage.getItem("isAuth");
+  const username = localStorage.getItem("currentUser");
+
   return (
     <header>
 
@@ -22,10 +27,15 @@ export default function Navbar() {
             <Link href="/doc">Documents</Link>
           </ul>
 
+          {isAuth ?(
+            <h2>{username}</h2>
+          ):          
           <div className="auth-buttons">
-            <button className="login">Login</button>
-            <button className="register">Register</button>
+            <Link href={"/login"} className="login">Login</Link>
+            <Link href="/registration" className="register">Register</Link>
           </div>
+          }
+
 
         </nav>
 
