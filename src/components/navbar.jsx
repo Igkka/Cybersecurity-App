@@ -9,6 +9,9 @@ let links = [
 ]
 
 export default function Navbar() {
+ const [isIn, setIsIn] = useState(false);
+ const [isUp, setIsUp] = useState(false);
+
   return (
     <header>
 
@@ -17,14 +20,18 @@ export default function Navbar() {
           <div className="logo">PulseGuard</div>
 
           <ul className="nav-links">
-            <Link href="/">Home</Link>
-            <a href="#pricing">Pricing</a>
+            <Link href="/home">Home</Link>
+            <a href="#rates">Rates</a>
             <Link href="/doc">Documents</Link>
           </ul>
 
           <div className="auth-buttons">
-            <button className="login">Login</button>
-            <button className="register">Register</button>
+            <button onClick={() => setIsIn(true)} className="login" >
+              Sign in
+            </button>
+            <button onClick={() => setIsUp(true)} className="register" >
+              Sign up
+            </button>
           </div>
 
         </nav>

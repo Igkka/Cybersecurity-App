@@ -29,7 +29,7 @@ export default function PricingPage() {
             id="pricing"
             className="pricing"
         >
-            <h2>Pricing</h2>
+            <h2>Rates</h2>
 
             <div className="cards">
 

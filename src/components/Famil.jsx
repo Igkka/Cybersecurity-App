@@ -1,4 +1,4 @@
-import "@/components/style/Famil.css"
+import "./style/Famil.css";
 
 
 export default function FamilPage() {

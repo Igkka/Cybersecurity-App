@@ -62,12 +62,18 @@
     padding:15px;
     border:none;
     border-radius:15px;
-    cursor:pointer;
     font-size:16px;
     font-weight:600;
-    background:#30ff79;
-    color:black;
+    background:rgba(255, 255, 255, 0.11);
+    color:white;
     transition:.3s;
+    border:1px solid #00521d;
+    &:hover{
+        cursor: pointer;
+        background: #30ff79;
+        color:black;
+    }
+
 }
 
 
