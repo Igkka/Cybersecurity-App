@@ -5,7 +5,7 @@ import Sphere from "@/components/sphere";
 import HomePage from "@/components/Home";
 import PricingPage from "@/components/Pricing";
 import FooterPage from "@/components/Footer";
-import DocumentsPage from "@/app/doc/page";
+import FamilPage from "@/components/Famil";
 
 
 export default function Home() {
@@ -13,9 +13,10 @@ export default function Home() {
     <div className={styles.page}>
 
       <Navbar />
+      <Sphere/>
       <main>
-        <HomePage />
-        <Sphere />
+        <HomePage/>
+        <FamilPage/>
         <PricingPage />
       </main>
       <FooterPage />

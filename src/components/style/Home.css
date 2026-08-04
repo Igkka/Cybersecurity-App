@@ -1,12 +1,11 @@
 .home{
-    min-height:110vh;
+    min-height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
     padding:40px;
-    margin-top: 700px;
     opacity: 0;
     transform: translateY(40px);
     animation: show .8s ease forwards;

@@ -6,16 +6,17 @@ body{
 }
 
 .scene {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  background: transparent;
-  opacity: 0;
-    transform: translateY(40px);
-    animation: show .8s ease forwards;
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+  z-index: 1;
 }
 
 .sphere {
@@ -30,6 +31,7 @@ body{
   animation: pulse 2s ease-in-out infinite;
   position: relative;
   opacity: 0.8;
+  
 }
 
 .sphere::before {

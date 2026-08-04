@@ -2,7 +2,6 @@
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:35px;
-    align-items: stretch;
 }
 
 .card{
@@ -20,12 +19,17 @@
     animation: show .8s ease forwards;
 }
 
-.pricing{
+.pricing {
+    width: 100%;
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 40px;
     h2{
-        text-align: center;
-        
+           text-align: center;
+    margin-bottom: 60px; 
     }
 }
+
 
 .card:hover{
     transform:translateY(-10px);

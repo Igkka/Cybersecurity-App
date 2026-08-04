@@ -24,15 +24,11 @@ body {
     scroll-behavior: smooth;
   background:
       radial-gradient(
-      circle at 10% 70%,
+      circle at 10% 60%,
       #30ad30b4,
-      transparent 25%
+      transparent 20%
     ),
-    radial-gradient(
-      circle at 80% 30%,
-      rgba(59, 246, 131, 0.25),
-      transparent 40%
-    ),
+
     #233F2D;
   color:#fff;
   
@@ -47,10 +43,10 @@ body {
     radial-gradient(
       circle at 10% 5%,
       #30ad30,
-      transparent 50%
+      transparent 30%
     ),
     radial-gradient(
-      circle at 80% 70%,
+      circle at 80% 30%,
       rgba(59, 246, 131, 0.25),
       transparent 40%
     ),
