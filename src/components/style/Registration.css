@@ -40,5 +40,74 @@ form{
         background: rgba(255, 255, 255, 0.116);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.12);
+    color: white;
+    cursor: pointer;
+}
 
+.avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar-preview {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.199);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 12px rgba(59, 246, 131, 0.15);
+}
+
+.avatar-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-picker-btn,
+.avatar-default-btn {
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 16px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.avatar-picker-btn:hover,
+.avatar-default-btn:hover,
+.registerbnt:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+form p {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+form p a {
+    color: #38ff80;
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
 }

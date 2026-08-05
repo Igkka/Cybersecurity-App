@@ -40,5 +40,24 @@ form{
         background: rgba(255, 255, 255, 0.116);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255,255,255,0.12);
+    color: white;
+    cursor: pointer;
+}
 
+.signinbtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+form p {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+form p a {
+    color: #38ff80;
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
 }
