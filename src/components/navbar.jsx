@@ -22,8 +22,8 @@ export default function Navbar() {
           <div className="logo">PulseGuard</div>
 
           <ul className="nav-links">
-            <Link href="/">Home</Link>
-            <a href="#pricing">Pricing</a>
+            <Link href="/home">Home</Link>
+            <a href="#rates">Rates</a>
             <Link href="/doc">Documents</Link>
           </ul>
 
