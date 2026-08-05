@@ -22,7 +22,7 @@ export default function Navbar() {
           <div className="logo">PulseGuard</div>
 
           <ul className="nav-links">
-            <Link href="/home">Home</Link>
+            <Link href="/">Home</Link>
             <a href="#rates">Rates</a>
             <Link href="/doc">Documents</Link>
           </ul>
@@ -31,8 +31,8 @@ export default function Navbar() {
             <h2>{username}</h2>
           ):          
           <div className="auth-buttons">
-            <Link href={"/login"} className="login">Login</Link>
-            <Link href="/registration" className="register">Register</Link>
+            <Link href={"/login"} className="login">Sign Up</Link>
+            <Link href="/registration" className="register">Sign In</Link>
           </div>
           }
 

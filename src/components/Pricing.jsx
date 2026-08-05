@@ -26,8 +26,8 @@ const plans = [
 export default function PricingPage() {
     return (
         <section
-            id="pricing"
-            className="pricing"
+            id="rates"
+            className="rates"
         >
             <h2>Rates</h2>
 

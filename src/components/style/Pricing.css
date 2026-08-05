@@ -19,7 +19,7 @@
     animation: show .8s ease forwards;
 }
 
-.pricing {
+.rates {
     width: 100%;
     max-width: 1200px;
     margin: 120px auto;
@@ -75,8 +75,6 @@
     } 
 
 }
-
-
 
 .card button:hover{
     background:white;

@@ -1,0 +1,54 @@
+.contact a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100px;
+    margin: 15px;
+    border-radius: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: .25s ease-in-out;
+    cursor: pointer;
+}
+
+.contact{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    h2{
+        font-size: 45px;
+        margin-top: 25px;
+    }
+    p{
+        color: rgb(218, 217, 217);
+        font-size: 20px;
+        margin-top: 25px;
+    }
+}
+#telegrambtn{
+    background: rgba(34, 159, 217, 0.3);
+}
+
+#telegrambtn:hover{
+    background: #26A5E4;
+    transform: translateY(-4px);
+}
+
+#githubbtn{
+    background: rgba(36,41,47,.3);
+}
+
+#githubbtn:hover{
+    background: #24292F;
+    transform: translateY(-4px);
+}
+.contactimg{
+    width: 50%; 
+}

@@ -20,7 +20,7 @@
 
 .famil p {
     color: rgb(218, 217, 217);
-    font-size: 24px;
+    font-size: 20px;
     margin-top: 25px;
 }
 
@@ -42,6 +42,7 @@
     background: white;
     color: black;
     border: 1px solid darkblue;
+    transition:.5s ease-in-out all ;
     }
     
 }
@@ -63,5 +64,6 @@
     background: rgba(0, 0, 0, 0.623);
     color: white;
     border: 1px solid seagreen;
+        transition:.5s ease-in-out all ;
     }
 }

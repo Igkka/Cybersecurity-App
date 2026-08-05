@@ -6,7 +6,7 @@ import HomePage from "@/components/Home";
 import PricingPage from "@/components/Pricing";
 import FooterPage from "@/components/Footer";
 import FamilPage from "@/components/Famil";
-
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -17,6 +17,7 @@ export default function Home() {
       <main>
         <HomePage/>
         <FamilPage/>
+        <Contact/>
         <PricingPage />
       </main>
       <FooterPage />

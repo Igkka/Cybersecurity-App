@@ -48,12 +48,7 @@ header {
     border-radius: 15px;
     padding: 5px 10px 5px 10px;
     color: white;
-    &:hover{
-    cursor: pointer;
-    background: white;
-    color: black;
-    border: 1px solid darkblue;
-    }
+
     
 }
 
@@ -69,12 +64,6 @@ header {
     padding: 5px 10px 5px 10px;
     margin-left: 15px;
     color: white;
-    &:hover{
-    cursor: pointer;
-    padding: 5px;
-    background: rgba(0, 0, 0, 0.623);
-    color: white;
-    border: 1px solid seagreen;
-    }
+
 }
 
