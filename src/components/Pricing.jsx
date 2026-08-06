@@ -1,4 +1,8 @@
+"use client"
+
 import "./style/Pricing.css";
+import { useState } from "react";
+
 const plans = [
     {
         title: "Free",
@@ -24,6 +28,38 @@ const plans = [
 ];
 
 export default function PricingPage() {
+
+    const choisePlan = (plantype) => {
+
+    const users = JSON.parse(localStorage.getItem("users"))
+    const currentPlan = localStorage.getItem("plan");
+
+    if (!users) {
+        alert("Please log in first!")
+        return
+    }
+
+
+
+if(currentPlan == "pro" && plantype == "free"){
+    alert("You cannot switch from the Pro plan to the Free plan.")
+}else if(plantype == currentPlan){
+    alert("You already have this plan.")
+}else{
+    alert(`You selected the ${plantype} plan!`)
+    window.location.href = "/"
+}
+
+
+
+    users.plan = plantype
+    localStorage.setItem("users", JSON.stringify(users));
+    localStorage.setItem("plan", plantype);
+
+
+}
+
+
     return (
         <section
             id="rates"
@@ -52,7 +88,7 @@ export default function PricingPage() {
 
                         </ul>
 
-                        <button>
+                        <button onClick={() => choisePlan(plan.title.toLowerCase())}>
                             Select
                         </button>
 

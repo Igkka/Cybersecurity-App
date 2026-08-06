@@ -23,7 +23,7 @@ function migrateLegacyUser() {
       localStorage.setItem(USERS_KEY, JSON.stringify(users));
     }
   } catch {
-    /* ignore invalid legacy data */
+
   }
 
   localStorage.removeItem("user");
@@ -52,6 +52,7 @@ export function registerUser({ username, email, password, avatar }) {
     email,
     password,
     avatar: avatar || DEFAULT_AVATAR,
+    plan,
   };
 
   users.push(user);
@@ -67,7 +68,8 @@ export function loginUser({ username, email, password }) {
     (u) =>
       u.username === username &&
       u.email === email &&
-      u.password === password
+      u.password === password &&
+      u.plan === plan
   );
 
   if (!user) {
@@ -82,6 +84,7 @@ export function setSession(user) {
   localStorage.setItem("isAuth", "true");
   localStorage.setItem("currentUser", user.username);
   localStorage.setItem("currentAvatar", user.avatar || DEFAULT_AVATAR);
+  localStorage.getItem("plan") || ""
 }
 
 export function logout() {
@@ -99,5 +102,6 @@ export function getSession() {
     isAuth: localStorage.getItem("isAuth") === "true",
     username: localStorage.getItem("currentUser") || "",
     avatar: localStorage.getItem("currentAvatar") || DEFAULT_AVATAR,
+    plan: localStorage.getItem("plan") || ""
   };
 }

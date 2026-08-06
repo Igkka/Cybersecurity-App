@@ -6,12 +6,16 @@ import { useEffect, useState } from "react";
 import { DEFAULT_AVATAR, getSession, logout } from "@/lib/auth";
 
 export default function Navbar() {
+
   const [session, setSession] = useState({
     isAuth: false,
     username: "",
     avatar: DEFAULT_AVATAR,
+    plan:""
   });
 
+  
+  
   useEffect(() => {
     setSession(getSession());
   }, []);
@@ -21,6 +25,7 @@ export default function Navbar() {
     setSession({ isAuth: false, username: "", avatar: DEFAULT_AVATAR });
     window.location.href = "/";
   };
+console.log(localStorage.getItem("plan"));
 
   return (
     <header>
@@ -40,7 +45,14 @@ export default function Navbar() {
               src={session.avatar}
               alt={`${session.username} avatar`}
             />
-            <h2>{session.username}</h2>
+            <h2>{session.username }   {
+                  session.plan === "free"
+                    ? "ᶠʳᵉᵉ"
+                  : session.plan === "pro"
+                    ? "ᴾᴿᴼ"
+                  : ""
+              }</h2>
+
             <button type="button" className="logout-btn" onClick={handleLogout}>
               Log out
             </button>
@@ -48,10 +60,10 @@ export default function Navbar() {
         ) : (
           <div className="auth-buttons">
             <Link href="/login" className="login">
-              Sign_In
+              Sign In
             </Link>
             <Link href="/registration" className="register">
-              Sign_Up
+              Sign Up
             </Link>
           </div>
         )}
