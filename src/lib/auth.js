@@ -52,7 +52,7 @@ export function registerUser({ username, email, password, avatar }) {
     email,
     password,
     avatar: avatar || DEFAULT_AVATAR,
-    plan,
+    plan:"free",
   };
 
   users.push(user);
@@ -91,6 +91,7 @@ export function logout() {
   localStorage.removeItem("isAuth");
   localStorage.removeItem("currentUser");
   localStorage.removeItem("currentAvatar");
+  localStorage.removeItem("plan")
 }
 
 export function getSession() {

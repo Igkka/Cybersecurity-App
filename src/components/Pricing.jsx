@@ -30,26 +30,28 @@ const plans = [
 export default function PricingPage() {
 
     const choisePlan = (plantype) => {
-
+        
     const users = JSON.parse(localStorage.getItem("users"))
     const currentPlan = localStorage.getItem("plan");
+
+    if(currentPlan == "pro" && plantype == "free"){
+        users.plantype = "pro"
+        alert("You cannot switch from the Pro plan to the Free plan.")
+        return
+    }else if(plantype == currentPlan){
+        currentPlan == plantype
+        alert("You already have this plan.")
+        return
+    }else{
+        alert(`You selected the ${plantype} plan!`)
+        window.location.href = "/"
+    }
+
 
     if (!users) {
         alert("Please log in first!")
         return
     }
-
-
-
-if(currentPlan == "pro" && plantype == "free"){
-    alert("You cannot switch from the Pro plan to the Free plan.")
-}else if(plantype == currentPlan){
-    alert("You already have this plan.")
-}else{
-    alert(`You selected the ${plantype} plan!`)
-    window.location.href = "/"
-}
-
 
 
     users.plan = plantype

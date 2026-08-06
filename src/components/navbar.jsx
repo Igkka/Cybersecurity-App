@@ -4,6 +4,7 @@ import "./style/navbar.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { DEFAULT_AVATAR, getSession, logout } from "@/lib/auth";
+import { Coins } from "lucide-react";
 
 export default function Navbar() {
 
@@ -36,6 +37,14 @@ console.log(localStorage.getItem("plan"));
           <Link href="/">Home</Link>
           <a href="/#rates">Rates</a>
           <Link href="/doc">Documents</Link>
+          {
+          session.plan === "free"? 
+          <Link href="/free">Free</Link>
+          :session.plan === "pro"?
+          <Link href="/pro">Pro</Link>
+          : ""
+          }
+          
         </ul>
 
         {session.isAuth ? (
@@ -47,9 +56,9 @@ console.log(localStorage.getItem("plan"));
             />
             <h2>{session.username }   {
                   session.plan === "free"
-                    ? "ᶠʳᵉᵉ"
+                    ? "ᶠʳᵉᵉ "
                   : session.plan === "pro"
-                    ? "ᴾᴿᴼ"
+                    ? "ᴾᴿᴼ "
                   : ""
               }</h2>
 
@@ -60,10 +69,10 @@ console.log(localStorage.getItem("plan"));
         ) : (
           <div className="auth-buttons">
             <Link href="/login" className="login">
-              Sign In
+              Sign_In
             </Link>
             <Link href="/registration" className="register">
-              Sign Up
+              Sign_Up
             </Link>
           </div>
         )}
