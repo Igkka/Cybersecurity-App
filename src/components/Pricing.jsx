@@ -6,7 +6,7 @@ import { useState } from "react";
 const plans = [
     {
         title: "Free",
-        price: "$0 - 10 credits",
+        price: "$0 - 15 credits",
         features: [
             "Basic Password Storage",
             "Password Strength Check",
@@ -15,7 +15,7 @@ const plans = [
     },
     {
         title: "Pro",
-        price: "$1 - 100 credit",
+        price: "$3 - 100 credit",
         features: [
             "Strong Password Storage",
             "Password Strength Check",

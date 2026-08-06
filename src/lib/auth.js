@@ -19,12 +19,11 @@ function migrateLegacyUser() {
         email: oldUser.email,
         password: oldUser.password,
         avatar: oldUser.avatar || DEFAULT_AVATAR,
+        plan: oldUser.plan || "free",
       });
       localStorage.setItem(USERS_KEY, JSON.stringify(users));
     }
-  } catch {
-
-  }
+  } catch {}
 
   localStorage.removeItem("user");
 }
@@ -52,7 +51,7 @@ export function registerUser({ username, email, password, avatar }) {
     email,
     password,
     avatar: avatar || DEFAULT_AVATAR,
-    plan:"free",
+    plan: "free",
   };
 
   users.push(user);
@@ -65,11 +64,7 @@ export function registerUser({ username, email, password, avatar }) {
 export function loginUser({ username, email, password }) {
   const users = getUsers();
   const user = users.find(
-    (u) =>
-      u.username === username &&
-      u.email === email &&
-      u.password === password &&
-      u.plan === plan
+    (u) => u.username === username && u.email === email && u.password === password
   );
 
   if (!user) {
@@ -81,28 +76,29 @@ export function loginUser({ username, email, password }) {
 }
 
 export function setSession(user) {
+  const plan = user?.plan || "free";
   localStorage.setItem("isAuth", "true");
-  localStorage.setItem("currentUser", user.username);
-  localStorage.setItem("currentAvatar", user.avatar || DEFAULT_AVATAR);
-  localStorage.getItem("plan") || ""
+  localStorage.setItem("currentUser", user?.username || "");
+  localStorage.setItem("currentAvatar", user?.avatar || DEFAULT_AVATAR);
+  localStorage.setItem("plan", plan);
 }
 
 export function logout() {
   localStorage.removeItem("isAuth");
   localStorage.removeItem("currentUser");
   localStorage.removeItem("currentAvatar");
-  localStorage.removeItem("plan")
+  localStorage.removeItem("plan");
 }
 
 export function getSession() {
   if (typeof window === "undefined") {
-    return { isAuth: false, username: "", avatar: DEFAULT_AVATAR };
+    return { isAuth: false, username: "", avatar: DEFAULT_AVATAR, plan: "" };
   }
 
   return {
     isAuth: localStorage.getItem("isAuth") === "true",
     username: localStorage.getItem("currentUser") || "",
     avatar: localStorage.getItem("currentAvatar") || DEFAULT_AVATAR,
-    plan: localStorage.getItem("plan") || ""
+    plan: localStorage.getItem("plan") || "",
   };
 }

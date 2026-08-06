@@ -4,29 +4,24 @@ import "./style/navbar.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { DEFAULT_AVATAR, getSession, logout } from "@/lib/auth";
-import { Coins } from "lucide-react";
 
 export default function Navbar() {
-
   const [session, setSession] = useState({
     isAuth: false,
     username: "",
     avatar: DEFAULT_AVATAR,
-    plan:""
+    plan: "",
   });
 
-  
-  
   useEffect(() => {
     setSession(getSession());
   }, []);
 
   const handleLogout = () => {
     logout();
-    setSession({ isAuth: false, username: "", avatar: DEFAULT_AVATAR });
+    setSession({ isAuth: false, username: "", avatar: DEFAULT_AVATAR, plan: "" });
     window.location.href = "/";
   };
-console.log(localStorage.getItem("plan"));
 
   return (
     <header>
@@ -37,14 +32,14 @@ console.log(localStorage.getItem("plan"));
           <Link href="/">Home</Link>
           <a href="/#rates">Rates</a>
           <Link href="/doc">Documents</Link>
-          {
-          session.plan === "free"? 
-          <Link href="/free">Free</Link>
-          :session.plan === "pro"?
-          <Link href="/pro">Pro</Link>
-          : ""
-          }
-          
+          <Link href="/safety">Safety</Link>
+          {session.plan === "free" ? (
+            <Link href="/free">Free</Link>
+          ) : session.plan === "pro" ? (
+            <Link href="/pro">Pro</Link>
+          ) : (
+            ""
+          )}
         </ul>
 
         {session.isAuth ? (
@@ -54,13 +49,17 @@ console.log(localStorage.getItem("plan"));
               src={session.avatar}
               alt={`${session.username} avatar`}
             />
-            <h2>{session.username }   {
-                  session.plan === "free"
-                    ? "ᶠʳᵉᵉ "
+            <div className="user-meta">
+              <h2>
+                {session.username}
+                {session.plan === "free"
+                  ? " ᶠʳᵉᵉ"
                   : session.plan === "pro"
-                    ? "ᴾᴿᴼ "
-                  : ""
-              }</h2>
+                  ? " ᴾᴿᴼ"
+                  : ""}
+              </h2>
+              
+            </div>
 
             <button type="button" className="logout-btn" onClick={handleLogout}>
               Log out
