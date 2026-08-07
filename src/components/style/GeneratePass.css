@@ -1,0 +1,56 @@
+.genpass{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    h2{
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 50px;
+    }
+}
+
+.genpasscontent{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copybtn{
+margin-left: 25px;
+cursor: pointer;
+}
+
+.newgenpass{
+    padding:30px;
+    border-radius:25px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    transition:.35s;
+    text-align: center;
+    max-height: 75px;
+    min-width: 250px;
+    text-align: center;
+    display:flex;
+    justify-content:center;
+}
+
+.createpassbtn{
+    padding:16px 28px;
+    border:none;
+    border-radius:16px;
+    background:#38ff80;
+    color:black;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
