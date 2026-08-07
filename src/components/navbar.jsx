@@ -31,8 +31,7 @@ export default function Navbar() {
         <ul className="nav-links">
           <Link href="/">Home</Link>
           <a href="/#rates">Rates</a>
-          <Link href="/doc">Documents</Link>
-          <Link href="/safety">Safety</Link>
+          <Link href="/doc">Documents</Link>  
           {session.plan === "free" ? (
             <Link href="/free">Free</Link>
           ) : session.plan === "pro" ? (
