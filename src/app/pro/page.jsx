@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar"
 import PassStorage from "@/components/PasswordStorage"
 import GeneratePass from "@/components/GeneratePass"
 import UserBalance from "@/components/Balance"
+import CheckPass from "@/components/CheckPass"
 
 export default function ProPage(){
  return(
@@ -11,6 +12,7 @@ export default function ProPage(){
    <UserBalance/>
     <PassStorage/>
     <GeneratePass/>
+    <CheckPass/>
 
     </>
  )
