@@ -24,7 +24,6 @@
 }
 
 .copybtn{
-margin-left: 25px;
 cursor: pointer;
 }
 
@@ -37,10 +36,10 @@ cursor: pointer;
     transition:.35s;
     text-align: center;
     max-height: 75px;
-    min-width: 250px;
+    min-width: 280px;
     text-align: center;
     display:flex;
-    justify-content:center;
+    justify-content:space-around;
 }
 
 .createpassbtn{
