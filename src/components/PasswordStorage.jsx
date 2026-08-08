@@ -3,6 +3,7 @@
 import "@/components/style/PasswordStorage.css"
 import { useState } from "react"
 import { useEffect } from "react"
+import { spendCoin } from "./SpendCoins"
 
 export default function PassStorage(){
 
@@ -26,11 +27,6 @@ export default function PassStorage(){
     const CreateStorage = (e) => {
         e.preventDefault()
 
-            const newStorage = {
-                id: Date.now(),
-                title: dataStorage.title,
-                password: dataStorage.password,
-           };
 
         if (
             dataStorage.title.trim() === "" ||
@@ -45,6 +41,16 @@ export default function PassStorage(){
             return;
         }
 
+        if (!spendCoin()) {
+        alert("You don't have enough coins!");
+        return;
+    }
+    
+    const newStorage = {
+        id: Date.now(),
+        title: dataStorage.title,
+        password: dataStorage.password,
+    };
         
         const updatedPasswords = [...passwords, newStorage];
         localStorage.setItem("passwords",JSON.stringify(updatedPasswords));

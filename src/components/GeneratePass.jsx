@@ -192,6 +192,7 @@
 import { useState } from "react";
 import "@/components/style/GeneratePass.css"
 import { Copy } from 'lucide-react';
+import { spendCoin } from "./SpendCoins";
 
 export default function GeneratePass(){
 
@@ -202,12 +203,17 @@ export default function GeneratePass(){
         let generatePassResult = ""
         const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
 
+        if (!spendCoin()) {
+            alert("You don't have enough coins!");
+            return;
+        }
+
         for(let i = 0;i < 16;i++){
             generatePassResult += chars[Math.floor(Math.random() *  chars.length)]
         }
         
         setNewPassword(generatePassResult)
-        console.log(generatePassResult)
+        window.location.reload()
     }
 
     const handleCopy = async () => {
